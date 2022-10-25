@@ -74,7 +74,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Img2} w={450} />
         </MovingComponent>
       </Box>
-      <HStack top={590} left={300} position="absolute">
+      <HStack top={590} left={0} position="relative">
         <Divider />
         <Grid templateColumns="repeat(11, 1fr)" gap={8}>
           <GridItem colSpan={2}>
