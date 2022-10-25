@@ -37,8 +37,8 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <Box backgroundImage={Img1} backgroundSize="cover" minW="800" minH="800">
-      <Box position="absolute" top="250" left="550">
+    <Box position="relative" backgroundImage={Img1} h="800px" w="800px">
+      <Box position="relative" top="170" left="250">
         <MovingComponent
           type="unfold"
           duration="1000ms"
@@ -51,7 +51,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Img2} w={325} />
         </MovingComponent>
       </Box>
-      <Box position="absolute" top="400" left="650">
+      <Box position="relative" top="200" left="350">
         <MovingComponent
           type="squeezeMix"
           duration="1000ms"
@@ -64,7 +64,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={pic3} w={325} />
         </MovingComponent>
       </Box>
-      <Box position="absolute" top="590" left="600">
+      <Box position="relative" top="150" left="300">
         <MovingComponent
           type="squeezeMix"
           duration="1000ms"
@@ -77,7 +77,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={pic2} w={250} />
         </MovingComponent>
       </Box>
-      <Box position="absolute" top="400" left="440">
+      <Box position="absolute" top="350" left="140">
         <MovingComponent
           type="squeezeMix"
           duration="1000ms"
@@ -90,7 +90,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={pic1} w={200} />
         </MovingComponent>
       </Box>
-      <HStack top={120} left={450} position="absolute">
+      <HStack top={50} left={150} position="absolute">
         <Divider />
         <Grid templateColumns="repeat(4, 1fr)" gap={6}>
           <GridItem colSpan={1}>
