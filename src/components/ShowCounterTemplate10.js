@@ -43,18 +43,17 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <VStack
+    <Box
+      position="relative"
       backgroundImage={Img1}
       backgroundSize="cover"
-      minW="800"
-      maxW="800"
-      minH="800"
-      maxH="800"
+      h="900px"
+      w="900px"
     >
-      <Box position="relative" left={150}>
+      <Box position="relative" left={400}>
         <Image src={Img3} w={500} />
 
-        <Box position="absolute" left={200} top={12}>
+        <Box position="absolute" left={199} top={20}>
           <MovingComponent
             type="unfold"
             duration="1000ms"
@@ -64,11 +63,11 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
             iteration="15"
             fillMode="none"
           >
-            <Image src={Img2} w={290} />
+            <Image src={Img2} w={270} />
           </MovingComponent>
         </Box>
       </Box>
-      <Box position="absolute" left={295} top={12}>
+      <Box position="absolute" left={0} top={0}>
         <MovingComponent
           type="flash"
           duration="1000ms"
@@ -81,7 +80,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Img4} w={350} />
         </MovingComponent>
       </Box>
-      <HStack top={750} left={450} position="absolute">
+      <HStack top={750} left={220} position="absolute">
         <Grid templateColumns="repeat(11, 1fr)" gap={5}>
           <GridItem colSpan={3} pt={3}>
             <Heading color="black"></Heading>
@@ -111,7 +110,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </GridItem>
         </Grid>
       </HStack>
-    </VStack>
+    </Box>
   );
 };
 
