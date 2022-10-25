@@ -43,15 +43,14 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <VStack
+   <Box
+      position="relative"
       backgroundImage={Img1}
       backgroundSize="cover"
-      minW="800"
-      maxW="800"
-      minH="800"
-      maxH="800"
+      h="900px"
+      w="900px"
     >
-      <Box position="absolute" left={550} top={520}>
+      <Box position="absolute" left={300} top={520}>
         <MovingComponent
           type="fadeOut"
           duration="1000ms"
@@ -64,10 +63,10 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Pic1} w={300} />
         </MovingComponent>
       </Box>
-      <Box position="absolute" top="200">
+      <Box position="relative" top="150" left="300">
         <Image src={Text1} w={300} />
       </Box>
-      <Box position="absolute" top="250">
+      <Box position="absolute" top="200" left="300">
         <MovingComponent
           type="zoomOut"
           duration="1000ms"
@@ -80,7 +79,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Text2} w={300} />
         </MovingComponent>
       </Box>
-      <HStack top={780} left={300} position="absolute">
+      <HStack top={780} left={10} position="absolute">
         <Grid templateColumns="repeat(11, 1fr)" gap={5}>
           <GridItem colSpan={3} pt={3}>
             <Heading color="black"></Heading>
@@ -110,7 +109,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </GridItem>
         </Grid>
       </HStack>
-    </VStack>
+    </Box>
   );
 };
 

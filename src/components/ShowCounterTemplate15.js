@@ -44,13 +44,12 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   const LSoon = ['S', 'O', 'O', 'N'];
 
   return (
-    <VStack
+   <Box
+      position="relative"
       backgroundImage={Img1}
       backgroundSize="cover"
-      minW="800"
-      maxW="800"
-      minH="800"
-      maxH="800"
+      h="800px"
+      w="800px"
     >
       <Box position="absolute" left={300} top={110}>
         <MovingComponent
@@ -65,7 +64,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Pic1} w={700} />
         </MovingComponent>
       </Box>
-      <Box position="absolute" top="390">
+      <Box position="absolute" top="290" left="200">
         <HStack>
           {LComing.map((letter, index) => (
             <MovingComponent
@@ -87,7 +86,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         </HStack>
       </Box>
 
-      <Box position="absolute" top="460">
+      <Box position="absolute" top="360" left="250">
         <HStack>
           {LSoon.map((letter, index) => (
             <MovingComponent
@@ -109,7 +108,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         </HStack>
       </Box>
 
-      <Box position="absolute" top="560">
+      <Box position="absolute" top="500" left="320">
         <Heading color="white" fontSize={24} fontFamily="">
           STAY TUNED
         </Heading>
@@ -125,7 +124,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           fillMode="none"
         ></MovingComponent>
       </Box>
-      <HStack top={200} left={300} position="absolute">
+      <HStack top={50} left={0} position="relative">
         <Grid templateColumns="repeat(11, 1fr)" gap={5}>
           <GridItem colSpan={3} pt={3}>
             <Heading color="black"></Heading>
@@ -155,7 +154,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </GridItem>
         </Grid>
       </HStack>
-    </VStack>
+    </Box>
   );
 };
 

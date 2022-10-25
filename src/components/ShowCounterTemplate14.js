@@ -43,15 +43,14 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <VStack
+   <Box
+      position="relative"
       backgroundImage={Img1}
       backgroundSize="cover"
-      minW="800"
-      maxW="800"
-      minH="800"
-      maxH="800"
+      h="900px"
+      w="900px"
     >
-      <Box position="absolute" left={510} top={590}>
+      <Box position="absolute" right={0} top={585}>
         <MovingComponent
           type="shadow"
           duration="1000ms"
@@ -64,15 +63,15 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Image src={Pic1} w={600} />
         </MovingComponent>
       </Box>
-      <Box position="absolute" top="350">
+      <Box position="relative" top="350">
         <Heading color="orange" fontFamily="sans-serif" fontSize={52}>
           GRAND
         </Heading>
       </Box>
-      <Box position="absolute" top="350">
+      <Box position="absolute" top="350" left="200">
         <Image src={Text1} w={500} />
       </Box>
-      <Box position="absolute" top="250">
+      <Box position="absolute" top="300">
         <MovingComponent
           type="flash"
           duration="1000ms"
@@ -82,10 +81,10 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           iteration="15"
           fillMode="none"
         >
-          <Image src={Pic2} w={800} />
+          <Image src={Pic2} w="full" />
         </MovingComponent>
       </Box>
-      <HStack top={150} left={300} position="absolute">
+      <HStack top={50} left={10} position="relative">
         <Grid templateColumns="repeat(11, 1fr)" gap={5}>
           <GridItem colSpan={3} pt={3}>
             <Heading color="black"></Heading>
@@ -115,7 +114,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </GridItem>
         </Grid>
       </HStack>
-    </VStack>
+    </Box>
   );
 };
 
