@@ -41,15 +41,14 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <VStack
+     <Box
+      position="relative"
       backgroundImage={Img1}
       backgroundSize="cover"
-      minW="800"
-      maxW="800"
-      minH="800"
-      maxH="800"
+      h="900px"
+      w="900px"
     >
-      <Box position="absolute" left={550} top={380}>
+      <Box position="relative" left={350} top={310}>
         <MovingComponent
           type="slideInFromLeft"
           duration="1000ms"
@@ -63,7 +62,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         </MovingComponent>
       </Box>
 
-      <HStack top={750} left={450} position="absolute">
+      <HStack top={750} left={250} position="absolute">
         <Grid templateColumns="repeat(11, 1fr)" gap={5}>
           <GridItem colSpan={3} pt={3}>
             <Heading color="black"></Heading>
@@ -93,7 +92,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </GridItem>
         </Grid>
       </HStack>
-    </VStack>
+    </Box>
   );
 };
 
