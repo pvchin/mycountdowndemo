@@ -37,7 +37,7 @@ const DateTimeDisplay = ({ value, type, isDanger }) => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <VStack backgroundImage={Img1} backgroundSize="cover" minW="800" minH="800">
+    <Box backgroundImage={Img1} backgroundSize="cover" minW="800" minH="800">
       <Box position="absolute" top="250" left="550">
         <MovingComponent
           type="unfold"
@@ -115,7 +115,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </GridItem>
         </Grid>
       </HStack>
-    </VStack>
+    </Box>
   );
 };
 
